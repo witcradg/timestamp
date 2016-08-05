@@ -17,6 +17,6 @@ app.get('/*', function (req, res) {
   res.send(JSON.stringify(obj));
 });
 
-app.listen(8080, function () {
-  console.log('app listening on port 8080!');
+app.listen(process.env.PORT|8080, function () {
+  console.log('app listening on port !');
 });
