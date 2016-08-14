@@ -1,0 +1,29 @@
+'use strict';
+
+var express = require('express'),
+    routes = require('./app/routes/index.js');
+    
+var app = express();
+var router = express.Router();
+
+app.use('/public', express.static(process.cwd() + '/public'));
+app.use("/",router);
+routes(router);
+
+
+//Creating Router() object
+
+//var router = express.Router();
+
+// Provide all routes here, this is for Home page.
+
+
+
+// Tell express to use this router with /api before.
+// You can put just '/' if you don't want any sub path before routes.
+
+
+
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+  console.log("server listening");
+});

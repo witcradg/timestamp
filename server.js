@@ -14,6 +14,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.use("/",router);
 routes(router);
 
+<<<<<<< 65c5198298c5360648e85127f81cac22208d7a5e
 
 //Creating Router() object
 
@@ -48,6 +49,8 @@ app.get('/*', function (req, res) {
 app.listen(process.env.PORT || 8080, function () {
   console.log('app listening on port.');
 =======
+=======
+>>>>>>> rebase?
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   console.log("server listening");
 >>>>>>> Change repository and implement using clementine.js
