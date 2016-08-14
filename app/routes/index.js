@@ -7,21 +7,17 @@ module.exports = function (router) {
     });
     
     router.get("/:value",function(req,res){
-      //res.json({"message" : "Hello "+req.params.value});
       
-/*************************/
-  var submission = req.params.value;
-  //may be either a number or a date string
-  var valueAsDate = Number(submission) ?  new Date(Number(submission)) :  new Date(submission);
-  var obj = { 'unix': null, 'natural': null };
-  if (valueAsDate.toString().indexOf('Invalid') < 0 ) {
-    obj.unix = valueAsDate.getTime();
-    obj.natural = valueAsDate.toString().split(' ').slice(1,4).join(' '); //as specified even though the requirements say "similar to" the example
+  		var submission = req.params.value;
+	  	//may be either a number or a date string
+  		var valueAsDate = Number(submission) ?  new Date(Number(submission)) :  new Date(submission);
+  		var obj = { 'unix': null, 'natural': null };
+		if (valueAsDate.toString().indexOf('Invalid') < 0 ) {
+   			obj.unix = valueAsDate.getTime();
+   			obj.natural = valueAsDate.toString().split(' ').slice(1,4).join(' '); //as specified even though the requirements say "similar to" the example
     //obj.natural = valueAsDate.toDateString();// enhanced functionality includes day of the week (rather than the date only).
-  }
-  res.send(JSON.stringify(obj, null, ' '));
-/*************************/
-
-    });
+  		}
+  		res.send(JSON.stringify(obj, null, ' '));
+  	});
 }
 
