@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Dean Witcraft",
+  "author": "Dean Witcraft witcradg@gmail.com",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0"
